@@ -1,4 +1,5 @@
-# Emoji Memory Game - Foundation of Software Engineering Project
+# Emoji Memory Game
+# Foundation of Software Engineering Project
 
 ## Overview
 
