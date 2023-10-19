@@ -14,8 +14,8 @@ The Emoji Memory Game is a fun and engaging matching game that challenges your m
 - [License](#license)
 
 ## Features
-1. 
-2. 
+1. Time based game
+2. Level up as you go forward
 3. 
 
 ## Getting Started
