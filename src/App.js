@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Timer from './Timer';
 
 function App() {
   const emojis = ['😀', '😁', '😂', '😃', '😄', '😅', '😆', '😉'];
@@ -8,6 +9,11 @@ function App() {
   const [flipped, setFlipped] = useState([]);
   const [solved, setSolved] = useState([]);
   const [disabled, setDisabled] = useState(false);
+  const [gameOver, setGameOver] = useState(null);
+
+  const handleTimeout = () => {
+    setGameOver("Game Over! Your time ran out.");
+  };
 
   useEffect(() => {
     const shuffleCards = () => {
@@ -59,6 +65,13 @@ function App() {
     <div className="App">
       <h1>Emoji Memory Game</h1>
       {solved.length === allEmojis.length && <h2>Congratulations! You won!</h2>}
+      <div>
+        {gameOver ? (
+          <h2>{gameOver}</h2>
+        ) : (
+          <Timer initialTime={60} onTimeout={handleTimeout} />
+        )}
+      </div>
       <div className="cards">
         {cards.map((emoji, index) => (
           <div
