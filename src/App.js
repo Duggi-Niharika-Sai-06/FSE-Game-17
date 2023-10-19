@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
-import Timer from './Timer';
+import Timer from './Components/Timer'
 
 function App() {
   const emojis = ['😀', '😁', '😂', '😃', '😄', '😅', '😆', '😉'];
@@ -10,6 +10,8 @@ function App() {
   const [solved, setSolved] = useState([]);
   const [disabled, setDisabled] = useState(false);
   const [gameOver, setGameOver] = useState(null);
+  const [reset, setReset] = useState(0);
+  const timerRef = useRef(null);
 
   const handleTimeout = () => {
     setGameOver("Game Over! Your time ran out.");
@@ -24,6 +26,10 @@ function App() {
   }, []);
 
   const handleClick = (index) => {
+    if (gameOver) {
+      return; // Don't allow flipping cards when the game is over
+    }
+    
     if (flipped.length === 2) {
       return;
     }
@@ -54,6 +60,11 @@ function App() {
     setFlipped([]);
     setSolved([]);
     setDisabled(false);
+    setReset((prevReset) => prevReset + 1); // Increment the reset value
+    if (timerRef.current) {
+      timerRef.current.resetTimer();
+    }
+    setGameOver(false);
     const shuffleCards = () => {
       let shuffled = allEmojis.sort(() => Math.random() - 0.5);
       setCards(shuffled);
@@ -69,7 +80,11 @@ function App() {
         {gameOver ? (
           <h2>{gameOver}</h2>
         ) : (
-          <Timer initialTime={60} onTimeout={handleTimeout} />
+          <Timer
+          key={reset} // Ensure the Timer component re-renders when reset changes
+          ref={timerRef}
+          initialTime={60}
+          onTimeout={handleTimeout} />
         )}
       </div>
       <div className="cards">
