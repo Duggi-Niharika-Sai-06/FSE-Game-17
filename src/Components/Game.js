@@ -23,7 +23,7 @@ function Game() {
       setCards(shuffled);
     };
     shuffleCards();
-  }, []);
+  });
 
   const handleClick = (index) => {
     if (gameOver) {
