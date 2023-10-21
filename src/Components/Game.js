@@ -101,7 +101,11 @@ function Game() {
             />
           ))}
         </div>
-        <button onClick={resetGame}>Reset Game</button>
+        <button class="button-82-pushable" role="button" onClick={resetGame}>
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text">Reset Game</span>
+        </button>
       </div>
     </div>
   );
