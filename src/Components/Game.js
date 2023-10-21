@@ -74,30 +74,34 @@ function Game() {
 
   return (
     <div>
-      {gameOver ? (
-        <h2>{gameOver}</h2>
-      ) : (
-        <Timer
-          key={reset}
-          ref={timerRef}
-          initialTime={60}
-          onTimeout={handleTimeout}
-        />
-      )}
-      <div className="cards">
-        {cards.map((emoji, index) => (
-          <Card
-            key={index}
-            emoji={emoji}
-            index={index}
-            flipped={flipped}
-            solved={solved}
-            disabled={disabled}
-            handleClick={handleClick}
-          />
-        ))}
+      <div>
+        {solved.length === allEmojis.length ? (<h2>Congratulations! You won!</h2>) : (
+          gameOver ? (
+            <h2>{gameOver}</h2>
+          ) : (
+            <Timer
+              key={reset}
+              ref={timerRef}
+              initialTime={30}
+              onTimeout={handleTimeout}
+            />
+          )
+        )}
+        <div className="cards">
+          {cards.map((emoji, index) => (
+            <Card
+              key={index}
+              emoji={emoji}
+              index={index}
+              flipped={flipped}
+              solved={solved}
+              disabled={disabled}
+              handleClick={handleClick}
+            />
+          ))}
+        </div>
+        <button onClick={resetGame}>Reset Game</button>
       </div>
-      <button onClick={resetGame}>Reset Game</button>
     </div>
   );
 }
