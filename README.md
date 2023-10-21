@@ -14,7 +14,10 @@ The Emoji Memory Game is a fun and engaging matching game that challenges your m
 
 ## Setup and Deployment
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-In the project directory, you can run:
+<br>
+The game has been deployed [here.](https://proemoji.netlify.app/)
+
+To run the project directory on local, you can run:
 
 ### `npm install`
 
