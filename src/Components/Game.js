@@ -23,7 +23,8 @@ function Game() {
       setCards(shuffled);
     };
     shuffleCards();
-  }, [1]);
+    // eslint-disable-next-line
+  }, []);
 
   const handleClick = (index) => {
     if (gameOver) {
