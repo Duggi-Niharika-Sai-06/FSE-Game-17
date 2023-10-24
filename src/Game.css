@@ -1,0 +1,32 @@
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .congratulations-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #018C07; /* Green color for the text */
+    text-align: center;
+    animation: jump 1s infinite, glow 1s infinite alternate;
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00;
+}
+
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FFD700;
+    }
+    to {
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700;
+    }
+  }
+  
+  

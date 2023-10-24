@@ -141,3 +141,22 @@
 .button-82-pushable:focus:not(:focus-visible) {
   outline: none;
 }
+
+.game-title {
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc, 0 0 70px #00ffcc;
+  animation: glow 1s infinite alternate;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+
+@keyframes glow {
+  from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc, 0 0 70px #00ffcc;
+  }
+  to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #00ccff, 0 0 40px #00ccff, 0 0 50px #00ccff, 0 0 60px #00ccff, 0 0 70px #00ccff, 0 0 80px #00ccff;
+  }
+}
