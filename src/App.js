@@ -5,7 +5,7 @@ import Game from './Components/Game';
 function App() {
   return (
     <div className="App">
-      <h1>Emoji Memory Game</h1>
+      <h1 className="game-title">Emoji Memory Game</h1>
       <Game />
     </div>
   );

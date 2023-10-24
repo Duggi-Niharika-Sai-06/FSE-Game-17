@@ -28,9 +28,18 @@ function Timer({ initialTime, onTimeout }, ref) {
   }));
 
   return (
-    <div>
-      <p>Time Left: {time} seconds</p>
-    </div>
+    <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <p style={{ 
+        fontSize: "2rem", 
+        fontWeight: "bold", 
+        color: "#000", 
+        textShadow: "0 0 5px #00ffcc, 0 0 10px #00ffcc"
+    }}>
+        Time Left: {time} seconds
+    </p>
+</div>
+
+
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Card from './Card';
-import Timer from './Timer'
+import Timer from './Timer';
+import '../Game.css';
 
 function Game() {
   const emojis = ['😀', '😁', '😂', '😃', '😄', '😅', '😆', '😉'];
@@ -76,7 +77,9 @@ function Game() {
   return (
     <div>
       <div>
-        {solved.length === allEmojis.length ? (<h2>Congratulations! You won!</h2>) : (
+        {solved.length === allEmojis.length ? (
+          <h2 className="congratulations-text">Congratulations! You won!</h2>
+        ) : (
           gameOver ? (
             <h2>{gameOver}</h2>
           ) : (
@@ -98,6 +101,7 @@ function Game() {
               solved={solved}
               disabled={disabled}
               handleClick={handleClick}
+              cardNumber={index + 1} // Pass card number here
             />
           ))}
         </div>
