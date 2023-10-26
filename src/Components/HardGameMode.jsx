@@ -4,8 +4,8 @@ import GameNavbar from './GameNavbar';
 
 import emojisData from '../common-emojis.json';
 
-import gameClickSound from '../audio/game_click.wav'
-import gameClickSoundWrong from '../audio/game_click_wrong.wav'
+import gameClickSound from '../audio/success_sound.wav'
+import gameClickSoundWrong from '../audio/fail_sound.wav'
 
 const StyledContainer = styled(Container)(({ theme }) => ({
     display: 'flex',
