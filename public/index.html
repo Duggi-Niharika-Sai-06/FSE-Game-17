@@ -9,85 +9,11 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <style>
-      /* Existing styles... */
-
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-          "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-          sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
-        color: #333;
-        text-align: center;
-      }
-
-      #root {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-
-      .emoji-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .emoji-card {
-        width: 80px;
-        height: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        font-size: 2rem;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .emoji-card:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-      }
-
-      /* New styles for the game title */
-      .game-title {
-            font-size: 5rem; 
-            color: #fff;
-            text-shadow: 0 0 10px #fff, 0 0 20px #ff33cc, 0 0 30px #ff33cc, 0 0 40px #ff33cc, 0 0 50px #ff33cc, 0 0 60px #ff33cc, 0 0 70px #ff33cc;
-            animation: glow 1s infinite alternate;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-top: 40px;
-        }
-
-      @keyframes glow {
-        from {
-          text-shadow: 0 0 10px #fff, 0 0 20px #ff33cc, 0 0 30px #ff33cc, 0 0 40px #ff33cc, 0 0 50px #ff33cc, 0 0 60px #ff33cc, 0 0 70px #ff33cc;
-        }
-        to {
-          text-shadow: 0 0 20px #fff, 0 0 30px #ff66b3, 0 0 40px #ff66b3, 0 0 50px #ff66b3, 0 0 60px #ff66b3, 0 0 70px #ff66b3, 0 0 80px #ff66b3;
-        }
-      }
-    </style>
-
     <title>Emoji Memory</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <h1 class="game-title">Emoji Game</h1>
       <!-- Other components will be inserted here by React -->
     </div>
   </body>

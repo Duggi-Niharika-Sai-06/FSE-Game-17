@@ -1,14 +1,55 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
-import Game from './Components/Game';
+import GameMenuController from "./Components/GameMenuController";
+import {Typography} from "@mui/material";
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element:
+            <div className="mt-5">
+                <Typography
+                    variant="h4"
+                    align="center"
+                    gutterBottom
+                    style={{
+                        color: '#fff',
+                        textShadow: '2px 2px 4px rgba(255, 255, 255, 0.7)', // Add text shadow for a shiny effect
+                        fontFamily: 'cursive', // Use a cursive font for a fancy look
+                        fontSize: '2.5rem', // Increase font size
+                        letterSpacing: '2px', // Add letter spacing for a fancy touch
+                    }}
+                    className="w-full"
+                >
+                    Emojination: Memory Adventures
+                </Typography>
+                <GameMenuController />
+            </div>,
+        errorElement:
+            <div className="mt-5">
+                <Typography
+                    variant="h4"
+                    align="center"
+                    gutterBottom
+                    style={{
+                        color: '#fff',
+                        textShadow: '2px 2px 4px rgba(255, 255, 255, 0.7)', // Add text shadow for a shiny effect
+                        fontFamily: 'cursive', // Use a cursive font for a fancy look
+                        fontSize: '2.5rem', // Increase font size
+                        letterSpacing: '2px', // Add letter spacing for a fancy touch
+                    }}
+                    className="w-full"
+                >
+                    Emojination: Memory Adventures
+                </Typography>
+                <GameMenuController />
+            </div>,
+    }]);
 
 function App() {
-  return (
-    <div className="App">
-      <h1 className="game-title">Emoji Memory Game</h1>
-      <Game />
-    </div>
-  );
+    return <RouterProvider router={router} />;
 }
 
 export default App;

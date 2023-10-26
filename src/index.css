@@ -2,16 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/*body {*/
+/*  margin: 0;*/
+/*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
+/*    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
+/*    sans-serif;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*}*/
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  height: 100vh; /* Set the body to fill the entire viewport height */
+  display: flex;
+  /*align-items: center; !* Vertically center the content *!*/
+  justify-content: center; /* Horizontally center the content */
+  /*background-color: #000; !* Set the background color for the entire page to black *!*/
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  color: #333;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes shinyBorder {
+  0% {
+    border-color: #12c2e9;
+    transform: scale(1);
+  }
+  50% {
+    border-color: #c471ed; /* Use a more noticeable color */
+    transform: scale(1.1);
+  }
+  100% {
+    border-color: #f64f59;
+    transform: scale(1);
+  }
+}
+
+@keyframes shinyBackground {
+  0% {
+    background-color: white; /* Start with a bright magenta color */
+  }
+  50% {
+    background-color: black; /* Transition to a bright cyan color */
+  }
+  100% {
+    background-color: white; /* Return to the magenta color */
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
