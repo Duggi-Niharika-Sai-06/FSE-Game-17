@@ -1,4 +1,6 @@
 # Emojination: Memory Adventures
+## Link to Website
+- [Proemoji](https://proemoji.netlify.app/)
 
 ## Table of Contents
 - [Game Objective and Rules](#game-objective-and-rules)
@@ -118,14 +120,16 @@ The game will be accessible at http://localhost:3000 in your web browser.
 
 ### Deployment
 We use Netlify for deployment. To deploy your game to Netlify:
-1. Create a Netlify account if you don't have one.
-2. Connect your GitHub repository to Netlify.
-3. Set up your build settings in the Netlify dashboard.
-4. Netlify will automatically deploy your game whenever you push changes to your connected GitHub repository.
+1. Created a Netlify account.
+2. Connected your GitHub repository to Netlify.
+3. Set up build settings in the Netlify dashboard.
+4. Netlify will automatically deploy game whenever changes has been pushed to connected GitHub repository.
 
 ## Credits
 
-- [List any third-party assets, libraries, or code snippets you've used in your project and give credit to their respective authors and sources.]
+- React JS
+- [GitHub](https://github.com/sobucki/emoji-memory-game)
+- [Medium](https://aadaobi.medium.com/building-a-memory-matching-game-in-javascript-48e792c7b563)
 
 ## Reflection
 
