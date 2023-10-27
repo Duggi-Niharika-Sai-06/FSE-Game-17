@@ -113,7 +113,7 @@ To run the development server and test the game locally, follow these steps:
 2. Navigate to the project directory where you've cloned the game using the `cd` command. Replace `"path/to/FSE_Game_17"` with the actual path on your system.
    ```shell
    cd path/to/FSE_Game_17
-   
+
 The game will be accessible at http://localhost:3000 in your web browser.
 
 ### Deployment
@@ -132,6 +132,30 @@ We use Netlify for deployment. To deploy your game to Netlify:
 ### Design and Development Process
 **Creating Emojination**: Memory Adventures was an exciting journey. We aimed to build a memory and matching game with a unique twist. Here are some key points from our design and development process:
 
+**Conceptualization**:
+- We started by conceptualizing the idea for the game, which was to create a memory and matching game with a unique twist involving emojis. The goal was to make the game engaging and enjoyable for players of all skill levels.
+
+**User Experience Design**:
+- We focused on designing an intuitive and user-friendly interface. This included creating the game menu, setting options, and sound controls to provide a seamless gaming experience.
+
+**Game Logic Implementation**:
+- Implementing the core game logic was a significant challenge. We had to carefully manage the state to track previously clicked emojis and update the score correctly. This involved defining the rules, win and lose conditions, and lives system.
+
+**Technical Stack Selection**:
+- We chose a technology stack that best suited our project. React.js was selected as the frontend framework for managing components and user interactions. Tailwind CSS was used for styling to achieve a clean and responsive design.
+
+**Deployment Strategy**:
+- We decided to deploy the game using Netlify. This choice simplified the deployment process, enabling automatic updates with each new commit, making the game accessible to players without complications.
+
+**Iterative Development**:
+- The development process involved regular playtesting and iterations to fine-tune the game's mechanics and difficulty levels. User feedback was invaluable in making necessary adjustments.
+
+**Challenges and Solutions**:
+- Challenges included complex card animations, initial lives balancing, and automated deployment with Netlify. These were addressed by shifting to CSS-based animations, focusing on core gameplay mechanics, and implementing a custom build configuration for Netlify.
+
+**Documentation and Resources**:
+- We relied on documentation and resources provided by the deployment platform (Netlify) when faced with deployment issues. This experience highlighted the importance of understanding the deployment platform and being prepared to adjust configurations as needed.
+
 ### Challenges Faced
 - **Game Logic**: Implementing the game logic for tracking previously clicked emojis and updating the score correctly was challenging. It required careful management of state and user interactions.
 
@@ -148,11 +172,11 @@ We use Netlify for deployment. To deploy your game to Netlify:
 - **Initial Lives Balancing**: Initially, we experimented with a different lives system, but it didn't align with the core mechanics of the game. We chose to focus on the core gameplay mechanics.
 - **Automated Deployment with Netlify**: During the initial deployment attempts, we encountered challenges with the automated deployment process using Netlify. The platform didn't configure our project as expected, leading to deployment issues.
 
-   **Issues with Netlify Deployment**: We faced difficulties with Netlify not automatically detecting and configuring our project correctly. The initial deployment resulted in unexpected errors.
+  **Issues with Netlify Deployment**: We faced difficulties with Netlify not automatically detecting and configuring our project correctly. The initial deployment resulted in unexpected errors.
 
-   **Solutions Implemented**: To resolve these issues, we needed to set up a custom build configuration using a `netlify.toml` file. This allowed us to define the build commands and specify project-specific settings. Additionally, we had to manage environment variables more effectively for different deployment stages, which required a deeper understanding of Netlify's configuration.
+  **Solutions Implemented**: To resolve these issues, we needed to set up a custom build configuration using a `netlify.toml` file. This allowed us to define the build commands and specify project-specific settings. Additionally, we had to manage environment variables more effectively for different deployment stages, which required a deeper understanding of Netlify's configuration.
 
-   These adjustments were necessary to ensure a seamless deployment process and match our project requirements.
+  These adjustments were necessary to ensure a seamless deployment process and match our project requirements.
 
 ### Lessons Learned
 - Focusing on core gameplay mechanics and simplicity can lead to a more enjoyable user experience.
