@@ -23,7 +23,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
     margin: theme.spacing(2),
 }));
 
-const MediumGameMode = ({onGameStateChange}) => {
+const MediumGameMode = ({onGameStateChange, soundEnabled}) => {
     const emojis = emojisData.emojis.slice(0, 24);
 
     const [gameStatus, setGameStatus] = useState('playing');
@@ -79,9 +79,10 @@ const MediumGameMode = ({onGameStateChange}) => {
 
     const onEmojiClick = (emoji) => {
         if (clickedEmojis.includes(emoji)) {
-
-            // Play the click sound
-            new Audio(gameClickSoundWrong).play().then();
+            if (soundEnabled) {
+                // Play the click sound
+                new Audio(gameClickSoundWrong).play().then();
+            }
 
             // Decrement lives and check if game is over
             setLives((prevLives) => prevLives - 1);
@@ -98,9 +99,10 @@ const MediumGameMode = ({onGameStateChange}) => {
                 setBestScore(currentScore);
             }
         } else {
-
-            // Play the click sound
-            new Audio(gameClickSound).play().then();
+            if (soundEnabled) {
+                // Play the click sound
+                new Audio(gameClickSound).play().then();
+            }
 
             // Emoji is not clicked before, increase the score
             setCurrentScore(currentScore + 1);

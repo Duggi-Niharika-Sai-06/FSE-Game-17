@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+#patches
+p2.patch
+
 # production
 /build
 
