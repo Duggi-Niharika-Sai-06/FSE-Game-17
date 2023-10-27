@@ -97,7 +97,7 @@ The game menu and settings allow you to customize your gaming experience and cho
 
 2. **Navigate to the Project Directory**: Change your working directory to the game's project folder.
     ```shell
-    cd emojination-memory-adventures
+    cd FSE_Game_17
     ```
 
 3. **Install Project Dependencies**: Install the necessary project dependencies using npm.
@@ -110,9 +110,9 @@ To run the development server and test the game locally, follow these steps:
 
 1. Open your terminal or command prompt.
 
-2. Navigate to the project directory where you've cloned the game using the `cd` command. Replace `"path/to/emojination-memory-adventures"` with the actual path on your system.
+2. Navigate to the project directory where you've cloned the game using the `cd` command. Replace `"path/to/FSE_Game_17"` with the actual path on your system.
    ```shell
-   cd path/to/emojination-memory-adventures
+   cd path/to/FSE_Game_17
    
 The game will be accessible at http://localhost:3000 in your web browser.
 
