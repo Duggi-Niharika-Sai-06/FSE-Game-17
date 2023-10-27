@@ -61,7 +61,7 @@ Emojination: Memory Adventures offers three distinct game modes to cater to play
 - **Hard Mode**:
     - Grid Size: 6x8
     - Emojis Shuffled Among: 48
-    - Description: For the ultimate test of memory, hard mode boasts an 8x6 grid with 48 shuffled emojis, providing a high level of difficulty for the most dedicated players.
+    - Description: For the ultimate test of memory, hard mode boasts an 6x8 grid with 48 shuffled emojis, providing a high level of difficulty for the most dedicated players.
 
 **Sound Settings**:
 
