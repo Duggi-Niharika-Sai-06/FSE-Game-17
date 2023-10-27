@@ -15,7 +15,8 @@ const StyledText = styled(Typography)({
     color: 'white',
     backgroundColor: 'black',
     padding: '8px 16px',
-    borderRadius: '10%'
+    borderRadius: '10%',
+    fontSize: "0.9rem"
 });
 
 const GameNavbar = ({ highScore, currentScore, elapsedTime, gameMode, lives }) => {
