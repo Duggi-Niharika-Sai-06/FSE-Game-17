@@ -142,7 +142,9 @@ We use Netlify for deployment. To deploy your game to Netlify:
 
 ### What Didn't Work
 - **Card Animations**: Initially, we attempted to implement card animations directly within the React components, using state changes and CSS-in-JS solutions. However, this approach proved to be complex and led to performance issues.
+
   **Solutions Implemented**: To resolve these issues, we decided to leverage CSS for card animations. We created a set of CSS classes in an index.css file.
+
 - **Initial Lives Balancing**: Initially, we experimented with a different lives system, but it didn't align with the core mechanics of the game. We chose to focus on the core gameplay mechanics.
 - **Automated Deployment with Netlify**: During the initial deployment attempts, we encountered challenges with the automated deployment process using Netlify. The platform didn't configure our project as expected, leading to deployment issues.
 
