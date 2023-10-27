@@ -34,6 +34,46 @@
 - The game visually indicates the loss of a life, for example, by removing a heart icon or displaying a decreasing life count.
 - If you run out of lives, the game progresses to a "Game Over" condition.
 
+## Sound Effects
+
+- **Correct Selection Sound**: A sound effect is played when the player selects an emoji correctly.
+
+- **Incorrect Selection Sound**: A different sound effect is played when the player makes an incorrect selection, such as clicking on a previously chosen emoji or running out of lives.
+
+These sound effects enhance the gaming experience, providing audio feedback for the player's actions.
+
+## Game Menu and Settings
+
+**Game Modes**:
+
+Emojination: Memory Adventures offers three distinct game modes to cater to players of varying skill levels, each with different grid sizes and emoji counts:
+
+- **Easy Mode**:
+    - Grid Size: 4x4
+    - Emojis Shuffled Among: 20
+    - Description: Easy mode is perfect for beginners, with a 4x4 grid and 20 shuffled emojis to keep the game approachable and enjoyable for new players.
+
+- **Medium Mode**:
+    - Grid Size: 6x4
+    - Emojis Shuffled Among: 24
+    - Description: Medium mode offers a balanced challenge, featuring a 6x4 grid with 24 shuffled emojis to test your memory and matching skills.
+
+- **Hard Mode**:
+    - Grid Size: 6x8
+    - Emojis Shuffled Among: 48
+    - Description: For the ultimate test of memory, hard mode boasts an 8x6 grid with 48 shuffled emojis, providing a high level of difficulty for the most dedicated players.
+
+**Sound Settings**:
+
+The game provides options to control sound effects:
+
+- **Sound On**: By default, sound effects are enabled. You can enjoy the satisfying audio feedback when making correct or incorrect selections.
+
+- **Sound Off**: If you prefer a quiet gaming experience, you can toggle off the sound effects.
+
+The game menu and settings allow you to customize your gaming experience and choose the level of challenge that suits your preferences.
+
+
 ### Score Tracking:
 - The game keeps track of your best score, representing your highest score achieved across different game sessions.
 - If you achieve a score higher than your previous best score, the top score is updated accordingly.
