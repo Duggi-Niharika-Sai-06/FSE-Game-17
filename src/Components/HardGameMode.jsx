@@ -53,8 +53,6 @@ const HardGameMode = ({onGameStateChange, soundEnabled}) => {
         // Shuffle emojis when the game starts
         setShuffledEmojis(shuffleEmojis(emojis));
 
-        console.log(clickedEmojis)
-        // eslint-disable-next-line
     }, [currentScore]);
 
     const shuffleEmojis = (emojis) => {
