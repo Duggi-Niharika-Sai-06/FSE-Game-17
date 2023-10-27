@@ -24,8 +24,12 @@ const Setting = ({onGameStateChange}) => {
     useEffect(() => {
         // Retrieve the audio setting from localStorage
         const savedAudioSetting = localStorage.getItem('audioOn');
-        // Set the audio state based on the saved value
-        setAudioOn(savedAudioSetting === '1');
+
+        // Check if the savedAudioSetting is '1' or '0' and set the audio state accordingly
+        if (savedAudioSetting === '1' || savedAudioSetting === '0') {
+            setAudioOn(savedAudioSetting === '1');
+        }
+
     }, []);
 
     const handleAudioToggle = () => {
