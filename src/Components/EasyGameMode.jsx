@@ -51,6 +51,7 @@ const EasyGameMode = ({onGameStateChange}) => {
         setShuffledEmojis(shuffleEmojis(emojis));
 
         console.log(clickedEmojis)
+        // eslint-disable-next-line
     }, [currentScore]);
 
     const shuffleEmojis = (emojis) => {

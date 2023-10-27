@@ -44,6 +44,7 @@ const MediumGameMode = ({onGameStateChange}) => {
 
         // Clean up the interval when the component unmounts
         return () => clearInterval(interval);
+        // eslint-disable-next-line
     }, [startTime]);
 
     useEffect(() => {
@@ -51,6 +52,7 @@ const MediumGameMode = ({onGameStateChange}) => {
         setShuffledEmojis(shuffleEmojis(emojis));
 
         console.log(clickedEmojis)
+        // eslint-disable-next-line
     }, [currentScore]);
 
     const shuffleEmojis = (emojis) => {
