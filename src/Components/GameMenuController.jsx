@@ -6,9 +6,11 @@ import GameMenu from "./GameMenu";
 import EasyGameMode from "./EasyGameMode";
 import MediumGameMode from "./MediumGameMode";
 import HardGameMode from "./HardGameMode";
+import Setting from "./Setting";
 
 const GameMenuController = () => {
     const [gameState, setGameState] = useState(0);
+    const audioOn = localStorage.getItem('audioOn') === '1' ? true : false;
 
     const scrollRef = useRef(null);
 
@@ -31,10 +33,11 @@ const GameMenuController = () => {
                 {gameState === 0 ? <GameMenu onGameStateChange={onGameStateChange} /> : ''}
                 {gameState === 1 ? <LevelSelection onGameStateChange={onGameStateChange} /> : ''}
                 {gameState === 2 ? <HighScore onGameStateChange={onGameStateChange} /> : ''}
+                {gameState === 3 ? <Setting onGameStateChange={onGameStateChange} /> : ''}
                 {gameState === 4 ? <About onGameStateChange={onGameStateChange} /> : ''}
-                {gameState === 5 ? <EasyGameMode onGameStateChange={onGameStateChange} /> : ''}
-                {gameState === 6 ? <MediumGameMode onGameStateChange={onGameStateChange} /> : ''}
-                {gameState === 7 ? <HardGameMode onGameStateChange={onGameStateChange} /> : ''}
+                {gameState === 5 ? <EasyGameMode onGameStateChange={onGameStateChange} soundEnabled={audioOn} /> : ''}
+                {gameState === 6 ? <MediumGameMode onGameStateChange={onGameStateChange} soundEnabled={audioOn} /> : ''}
+                {gameState === 7 ? <HardGameMode onGameStateChange={onGameStateChange} soundEnabled={audioOn} /> : ''}
             </div>
             {gameState === 5 ? <div className="m-20" ref={scrollRef}><hr /></div> : ""}
         </div>
