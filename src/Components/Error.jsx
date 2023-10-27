@@ -8,7 +8,7 @@ const Error = () => {
 
     useEffect(() => {
         navigate("/");
-    }, [])
+    })
     return (
         <div></div>
     );

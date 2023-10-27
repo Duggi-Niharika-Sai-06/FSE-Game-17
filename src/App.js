@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import GameMenuController from "./Components/GameMenuController";
 import {Typography} from "@mui/material";

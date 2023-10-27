@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Button, Container, Typography, Grid, styled } from '@mui/material';
 import LevelSelection from "./LevelSelection";
 import HighScore from "./HighScore";
 import About from "./About";
@@ -7,23 +6,6 @@ import GameMenu from "./GameMenu";
 import EasyGameMode from "./EasyGameMode";
 import MediumGameMode from "./MediumGameMode";
 import HardGameMode from "./HardGameMode";
-
-const StyledContainer = styled(Container)(({ theme }) => ({
-    background: 'linear-gradient(to bottom, #000, #111)',
-    padding: theme.spacing(4),
-    borderRadius: theme.spacing(2),
-    boxShadow: '0px 0px 15px 0px #fff',
-}));
-
-const StyledButton = styled(Button)(({ theme }) => ({
-    margin: theme.spacing(2),
-}));
-
-const ButtonContainer = styled(Grid)({
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-});
 
 const GameMenuController = () => {
     const [gameState, setGameState] = useState(0);

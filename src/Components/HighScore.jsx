@@ -19,13 +19,6 @@ const ButtonContainer = styled(Grid)({
     alignItems: 'center',
 });
 const HighScore = ({onGameStateChange}) => {
-
-    // Function to clear the high score
-    const clearHighScore = () => {
-        localStorage.removeItem('highScore');
-        window.location.reload(); // Reload the page to reflect changes
-    }
-
     return (
         <div className="mt-10">
             <StyledContainer className="w-96">

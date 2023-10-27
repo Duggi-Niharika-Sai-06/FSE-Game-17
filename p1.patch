@@ -1,0 +1,147 @@
+diff --git a/src/App.js b/src/App.js
+index e431c29..773c2bb 100644
+--- a/src/App.js
++++ b/src/App.js
+@@ -1,4 +1,4 @@
+-import React, {useEffect} from 'react';
++import React from 'react';
+ import './App.css';
+ import GameMenuController from "./Components/GameMenuController";
+ import {Typography} from "@mui/material";
+diff --git a/src/Components/EasyGameMode.jsx b/src/Components/EasyGameMode.jsx
+index dbfe585..ad4c935 100644
+--- a/src/Components/EasyGameMode.jsx
++++ b/src/Components/EasyGameMode.jsx
+@@ -51,6 +51,7 @@ const EasyGameMode = ({onGameStateChange}) => {
+         setShuffledEmojis(shuffleEmojis(emojis));
+ 
+         console.log(clickedEmojis)
++        // eslint-disable-next-line
+     }, [currentScore]);
+ 
+     const shuffleEmojis = (emojis) => {
+diff --git a/src/Components/Error.jsx b/src/Components/Error.jsx
+index 6c24f0d..64a6749 100644
+--- a/src/Components/Error.jsx
++++ b/src/Components/Error.jsx
+@@ -8,7 +8,7 @@ const Error = () => {
+ 
+     useEffect(() => {
+         navigate("/");
+-    }, [])
++    })
+     return (
+         <div></div>
+     );
+diff --git a/src/Components/GameMenu.jsx b/src/Components/GameMenu.jsx
+index 28cd740..8b7f76a 100644
+--- a/src/Components/GameMenu.jsx
++++ b/src/Components/GameMenu.jsx
+@@ -1,4 +1,4 @@
+-import React, {useState} from 'react';
++import React from 'react';
+ import { Button, Container, Typography, Grid, styled } from '@mui/material';
+ 
+ const StyledContainer = styled(Container)(({ theme }) => ({
+diff --git a/src/Components/GameMenuController.jsx b/src/Components/GameMenuController.jsx
+index 2e1b6e1..faf1a03 100644
+--- a/src/Components/GameMenuController.jsx
++++ b/src/Components/GameMenuController.jsx
+@@ -1,5 +1,4 @@
+ import React, { useState, useRef, useEffect } from 'react';
+-import { Button, Container, Typography, Grid, styled } from '@mui/material';
+ import LevelSelection from "./LevelSelection";
+ import HighScore from "./HighScore";
+ import About from "./About";
+@@ -8,23 +7,6 @@ import EasyGameMode from "./EasyGameMode";
+ import MediumGameMode from "./MediumGameMode";
+ import HardGameMode from "./HardGameMode";
+ 
+-const StyledContainer = styled(Container)(({ theme }) => ({
+-    background: 'linear-gradient(to bottom, #000, #111)',
+-    padding: theme.spacing(4),
+-    borderRadius: theme.spacing(2),
+-    boxShadow: '0px 0px 15px 0px #fff',
+-}));
+-
+-const StyledButton = styled(Button)(({ theme }) => ({
+-    margin: theme.spacing(2),
+-}));
+-
+-const ButtonContainer = styled(Grid)({
+-    display: 'flex',
+-    flexDirection: 'column',
+-    alignItems: 'center',
+-});
+-
+ const GameMenuController = () => {
+     const [gameState, setGameState] = useState(0);
+ 
+diff --git a/src/Components/GameNavbar.jsx b/src/Components/GameNavbar.jsx
+index 8f33c4e..be2305a 100644
+--- a/src/Components/GameNavbar.jsx
++++ b/src/Components/GameNavbar.jsx
+@@ -1,4 +1,4 @@
+-import React, { useState, useEffect } from 'react';
++import React from 'react';
+ import { Typography, Grid, styled } from '@mui/material';
+ 
+ const StyledNavbar = styled(Grid)(({ theme }) => ({
+diff --git a/src/Components/HardGameMode.jsx b/src/Components/HardGameMode.jsx
+index a761fc9..33db3f6 100644
+--- a/src/Components/HardGameMode.jsx
++++ b/src/Components/HardGameMode.jsx
+@@ -44,6 +44,7 @@ const HardGameMode = ({onGameStateChange}) => {
+ 
+         // Clean up the interval when the component unmounts
+         return () => clearInterval(interval);
++        // eslint-disable-next-line
+     }, [startTime]);
+ 
+     useEffect(() => {
+@@ -51,6 +52,7 @@ const HardGameMode = ({onGameStateChange}) => {
+         setShuffledEmojis(shuffleEmojis(emojis));
+ 
+         console.log(clickedEmojis)
++        // eslint-disable-next-line
+     }, [currentScore]);
+ 
+     const shuffleEmojis = (emojis) => {
+diff --git a/src/Components/HighScore.jsx b/src/Components/HighScore.jsx
+index 224a31b..d0c910e 100644
+--- a/src/Components/HighScore.jsx
++++ b/src/Components/HighScore.jsx
+@@ -19,13 +19,6 @@ const ButtonContainer = styled(Grid)({
+     alignItems: 'center',
+ });
+ const HighScore = ({onGameStateChange}) => {
+-
+-    // Function to clear the high score
+-    const clearHighScore = () => {
+-        localStorage.removeItem('highScore');
+-        window.location.reload(); // Reload the page to reflect changes
+-    }
+-
+     return (
+         <div className="mt-10">
+             <StyledContainer className="w-96">
+diff --git a/src/Components/MediumGameMode.jsx b/src/Components/MediumGameMode.jsx
+index 3f7cfa1..8c1a6f2 100644
+--- a/src/Components/MediumGameMode.jsx
++++ b/src/Components/MediumGameMode.jsx
+@@ -44,6 +44,7 @@ const MediumGameMode = ({onGameStateChange}) => {
+ 
+         // Clean up the interval when the component unmounts
+         return () => clearInterval(interval);
++        // eslint-disable-next-line
+     }, [startTime]);
+ 
+     useEffect(() => {
+@@ -51,6 +52,7 @@ const MediumGameMode = ({onGameStateChange}) => {
+         setShuffledEmojis(shuffleEmojis(emojis));
+ 
+         console.log(clickedEmojis)
++        // eslint-disable-next-line
+     }, [currentScore]);
+ 
+     const shuffleEmojis = (emojis) => {
