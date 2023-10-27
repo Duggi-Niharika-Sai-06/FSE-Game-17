@@ -35,6 +35,8 @@ const EasyGameMode = ({onGameStateChange}) => {
     const [startTime, setStartTime] = useState(new Date());
     const [elapsedTime, setElapsedTime] = useState(0);
 
+    const [lives, setLives] = useState(5); // State for lives
+
     useEffect(() => {
         const interval = setInterval(() => {
             const now = new Date();
@@ -80,8 +82,17 @@ const EasyGameMode = ({onGameStateChange}) => {
             // Play the click sound
             new Audio(gameClickSoundWrong).play().then();
 
+            // Decrement lives and check if game is over
+            setLives((prevLives) => prevLives - 1);
+
             // Game over, handle game lose logic
-            setGameStatus('lose');
+            if (lives - 1 === 0) {
+                setGameStatus('lose');
+                if (currentScore > bestScore) {
+                    setBestScore(currentScore);
+                }
+            }
+
             if (currentScore > bestScore) {
                 setBestScore(currentScore);
             }
@@ -124,12 +135,13 @@ const EasyGameMode = ({onGameStateChange}) => {
         const newShuffledEmojis = shuffleEmojis(emojis);
         setShuffledEmojis(newShuffledEmojis);
         setStartTime(new Date());
+        setLives(5);
     };
 
 
     return (
         <StyledContainer>
-            <GameNavbar highScore={bestScore} currentScore={currentScore} elapsedTime={elapsedTime} gameMode={"Easy"} />
+            <GameNavbar highScore={bestScore} currentScore={currentScore} elapsedTime={elapsedTime} gameMode={"Easy"} lives={lives} />
             {gameStatus === 'playing' ? (
                 <div
                     className="flex justify-center items-center text-center"
